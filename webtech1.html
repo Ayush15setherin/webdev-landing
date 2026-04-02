@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite WebDev Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f5f1ea;
+  color:#1c1c1c;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(245,241,234,0.7);
+  backdrop-filter:blur(10px);
+  z-index:100;
+}
+
+nav h2{
+  font-family:'Playfair Display', serif;
+  color:#8b6f47;
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#333;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  animation:zoom 20s infinite alternate;
+}
+
+@keyframes zoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.1);}
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.hero-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:white;
+  max-width:700px;
+  animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translate(-50%,-40%);}
+  to{opacity:1; transform:translate(-50%,-50%);}
+}
+
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  margin-bottom:30px;
+  font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+  padding:12px 30px;
+  border-radius:30px;
+  border:none;
+  margin:5px;
+  cursor:pointer;
+}
+
+.primary{
+  background:#d4af37;
+  color:black;
+}
+
+.outline{
+  border:1px solid white;
+  background:transparent;
+  color:white;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding:100px 60px;
+}
+
+.card{
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(15px);
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* IMAGE SECTION */
+.image-section{
+  background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover;
+  padding:120px 20px;
+  text-align:center;
+  color:white;
+  position:relative;
+}
+
+.image-section::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+}
+
+.image-section h2{
+  position:relative;
+  font-family:'Playfair Display', serif;
+  font-size:45px;
+}
+
+/* FORM */
+.section{
+  padding:100px 20px;
+  text-align:center;
+}
+
+form{
+  max-width:400px;
+  margin:auto;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:25px;
+  border:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.submit{
+  background:#8b6f47;
+  color:white;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#aaa;
+  padding:25px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Elite Institute</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Course</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+  <div class="hero-content">
+    <h1>Elegance in Code. Power in Skill.</h1>
+    <p>Master web development with a refined, modern approach.</p>
+    <button class="btn primary">Enroll Now</button>
+    <button class="btn outline">Explore</button>
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">📜 Refined Curriculum</div>
+  <div class="card">🎓 Elite Mentorship</div>
+  <div class="card">💼 Career Placement</div>
+  <div class="card">🏆 Certification</div>
+</section>
+
+<section class="image-section">
+  <h2>Build Your Legacy in Tech</h2>
+</section>
+
+<section class="section">
+  <h2>Apply Now</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <button class="btn submit">Join Program</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Elite WebDev Institute
+</footer>
+
+</body>
+</html>
